@@ -20,7 +20,7 @@ public class AppConfig {
     *  5. 소멸 : @Bean 의 destroyMethod = "destroy" 로 지정된 메서드가 호출되어 리소시 정리
     * */
 
-    @Bean(initMethod = "in/it", destroyMethod = "destroy")
+    @Bean(initMethod = "init", destroyMethod = "destroy")
     public PaymentService paymentServiceSingle(){
         return new PaymentService(naverPayGateway());
     }
