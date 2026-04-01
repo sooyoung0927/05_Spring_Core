@@ -1,7 +1,7 @@
-package com.wanted.di.section02;
+package com.wanted.di.section03;
 
-import com.wanted.di.section02.config.AppConfig;
-import com.wanted.di.section02.service.PaymentService;
+import com.wanted.di.section03.config.AppConfig;
+import com.wanted.di.section03.service.PaymentService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -13,13 +13,13 @@ public class Application {
         *  Spring IoC 컨테이너에서 객체 간의 의존성을 개발자가 관리하지 않고
         *  IoC 컨테이너가 자동으로 주입해주는 메커니즘
         *  */
-        System.out.println("==========의존성 주입 3가지 방법 테스트==========");
+        System.out.println("==========의존성 주입 테스트==========");
 
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 
         PaymentService paymentService = context.getBean("paymentService", PaymentService.class);
         paymentService.processPayment("order-002",200);
-        System.out.println("=============================================");
+        System.out.println("====================================");
         PaymentService paymentService2 = context.getBean("naverPay", PaymentService.class);
         paymentService2.processPayment("order-002",200);
 

@@ -1,4 +1,4 @@
-package com.wanted.di.section02.gateway;
+package com.wanted.di.section03.gateway;
 
 import org.springframework.stereotype.Component;
 
